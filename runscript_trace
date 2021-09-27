@@ -1,0 +1,16 @@
+
+
+#!/bin/bash
+
+#PBS -lnodes=1:ppn=8
+
+#PBS -lwalltime=00:05:00
+
+#PBS -qdefault
+
+cd /users/shre7989/wheeler-scratch/CS491/aashish_HW3
+
+module load mpich-3.2-gcc-4.8.5-7ebkszx
+
+export TAU_TRACE=1
+mpirun -n 4 tau_exec ./example
